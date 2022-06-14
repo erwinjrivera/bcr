@@ -1,7 +1,6 @@
 C:\Users\Erwin\source\repos\BatteryChargeReminder\BatteryChargeReminder\bin\Release\BatteryChargeReminder.exe.config
 C:\Users\Erwin\source\repos\BatteryChargeReminder\BatteryChargeReminder\bin\Release\BatteryChargeReminder.exe
 C:\Users\Erwin\source\repos\BatteryChargeReminder\BatteryChargeReminder\bin\Release\BatteryChargeReminder.pdb
-C:\Users\Erwin\source\repos\BatteryChargeReminder\BatteryChargeReminder\obj\Release\BatteryChargeReminder.csproj.AssemblyReference.cache
 C:\Users\Erwin\source\repos\BatteryChargeReminder\BatteryChargeReminder\obj\Release\BatteryChargeReminder.Form1.resources
 C:\Users\Erwin\source\repos\BatteryChargeReminder\BatteryChargeReminder\obj\Release\BatteryChargeReminder.Properties.Resources.resources
 C:\Users\Erwin\source\repos\BatteryChargeReminder\BatteryChargeReminder\obj\Release\BatteryChargeReminder.csproj.GenerateResource.cache

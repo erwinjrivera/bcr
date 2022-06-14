@@ -323,6 +323,13 @@ namespace BatteryChargeReminder
         {
             toggleSwitch1.Checked = !toggleSwitch1.Checked;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AssemblyInfo info = new AssemblyInfo();
+
+            MessageBox.Show(info.Title + "\n" + "v" + info.AssemblyVersion + "\n\n" + info.Company +"\n" + info.Copyright + "\n\nContact: " + info.Trademark, "About");
+        }
     }
 
 }

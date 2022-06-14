@@ -391,11 +391,12 @@ namespace BatteryChargeReminder
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ImageKey = "info.png";
             this.button1.ImageList = this.imageList2;
-            this.button1.Location = new System.Drawing.Point(455, 3);
+            this.button1.Location = new System.Drawing.Point(462, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(33, 28);
+            this.button1.Size = new System.Drawing.Size(23, 23);
             this.button1.TabIndex = 22;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // imageList2
             // 

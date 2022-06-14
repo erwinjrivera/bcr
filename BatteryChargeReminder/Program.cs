@@ -14,7 +14,7 @@ namespace BatteryChargeReminder
         [STAThread]
         static void Main(string[] args)
         {
-            Updater.GitHubRepo = "/erwinjrivera/BatteryChargeReminder";
+            Updater.GitHubRepo = "/erwinjrivera/bcr";
 
             if (Updater.AutoUpdate(args))
                 return;
