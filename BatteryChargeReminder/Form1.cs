@@ -168,7 +168,8 @@ namespace BatteryChargeReminder
                     SetBatteryStatusImage(estimatedChargeRemaining, batteryLifeRemaining);
                     break;
                 case 2:
-                case 8: // Charging - Indicates a battery is charging.
+                case 8:
+                case 9:// Charging - Indicates a battery is charging.
                     lblBatteryStatus.Text = string.Format("{0}%", estimatedChargeRemaining);
                     lblEstimatedTimeRemaining.Visible = true;
                     lblEstimatedTimeRemainingValue.Visible = true;
