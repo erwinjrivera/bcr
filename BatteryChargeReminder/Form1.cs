@@ -209,7 +209,7 @@ namespace BatteryChargeReminder
 
             if (Math.Round(estimatedChargeRemaining) >= doubleTrackBar1.ValueRight)
             {
-                if (batteryStatus == 8 || batteryStatus == 2 || batteryStatus == 0)
+                if (batteryStatus == 8 || batteryStatus == 2 || batteryStatus == 9 || batteryStatus == 0)
                 {
                     if (!toggleSwitch1.Checked)
                         return;
