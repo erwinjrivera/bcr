@@ -158,18 +158,13 @@ namespace BatteryChargeReminder
                 }
             }
 
-            switch (batteryStatus)
+            switch (status.PowerLineStatus)
             {
-                case 0: // Unplugged
-                case 1: // High - Indicates a high level of battery charge.
-                // case 2: // Low - Indicates a low level of battery charge
-                case 4: // Critical - Indicates a critically low level of battery charge.
+                case PowerLineStatus.Offline: // Unplugged
                     lblBatteryStatus.Text = string.Format("{0}%", estimatedChargeRemaining);
                     SetBatteryStatusImage(estimatedChargeRemaining, batteryLifeRemaining);
                     break;
-                case 2:
-                case 8:
-                case 9:// Charging - Indicates a battery is charging.
+                case PowerLineStatus.Online:
                     lblBatteryStatus.Text = string.Format("{0}%", estimatedChargeRemaining);
                     lblEstimatedTimeRemaining.Visible = true;
                     lblEstimatedTimeRemainingValue.Visible = true;
@@ -191,14 +186,7 @@ namespace BatteryChargeReminder
                     }
                     */
                     break;
-                case 128: // NoSystemBattery - Indicates that no battery is present.
-                    lblEstimatedTimeRemaining.Visible = true;                    
-                    lblEstimatedTimeRemainingValue.Visible = true;
-                    lblEstimatedTimeRemaining.Text = "Status:";
-                    lblEstimatedTimeRemainingValue.Text = "No battery";
-                    pbBatteryStatus.Image = imageList1.Images["no"];
-                    break;
-                case 255: // Unknown - Indicates an unknown battery condition.
+                default: // Unknown - Indicates an unknown battery condition.
                     lblEstimatedTimeRemaining.Visible = true;
                     lblEstimatedTimeRemainingValue.Visible = true;
                     lblEstimatedTimeRemaining.Text = "Status:";
@@ -209,7 +197,7 @@ namespace BatteryChargeReminder
 
             if (Math.Round(estimatedChargeRemaining) >= doubleTrackBar1.ValueRight)
             {
-                if (batteryStatus == 8 || batteryStatus == 2 || batteryStatus == 9 || batteryStatus == 0)
+                if (status.PowerLineStatus == PowerLineStatus.Online)
                 {
                     if (!toggleSwitch1.Checked)
                         return;
@@ -224,7 +212,7 @@ namespace BatteryChargeReminder
 
             if (Math.Round(estimatedChargeRemaining) < doubleTrackBar1.ValueLeft)
             {
-                if (batteryStatus != 8)
+                if (status.PowerLineStatus != PowerLineStatus.Online)
                 {
                     if (!toggleSwitch1.Checked)
                         return;
